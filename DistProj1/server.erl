@@ -302,7 +302,7 @@ listen() ->
             listen(); 
         {get_comments, {ParentID}, ClientPID} -> 
             CommentList = get_comments(ParentID), 
-            ClientPID ! {true, CommentList}, 
+            ClientPID ! {success, CommentList}, 
             listen()
     end. 
 
